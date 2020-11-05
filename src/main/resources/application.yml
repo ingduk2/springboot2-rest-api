@@ -8,7 +8,9 @@ spring:
     password:
   jpa:
     database-platform: org.hibernate.dialect.H2Dialect
-    properties.hibernate.hbm2ddl.auto: create
+    properties.hibernate.hbm2ddl.auto: none
   messages:
     basename: i18n/exception/exception
     encoding: UTF-8
+  jwt:
+    secret: goblepel@$&
