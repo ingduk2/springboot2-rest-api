@@ -28,7 +28,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
         .csrf().disable() //rest api csrf 필요없음
         .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS) //jwt token 인증이므로 세션 필요없음
         .and().authorizeRequests() //다음 리퀘스트에 대한 사용권한 체크
-        .antMatchers("/*/signin", "/*/signup").permitAll() //가입 및 인증 주소는 누구나 접근가능
+        .antMatchers("/*/signin", "/*/signin/**", "/*/signup", "/*/signup/**","/social/**").permitAll() //가입 및 인증 주소는 누구나 접근가능
         .antMatchers(HttpMethod.GET, "helloworld/**", "/exception/**").permitAll() //helowlrld get요청 누구나 접근 가능
         .antMatchers("/*/users").hasRole("ADMIN")
         .anyRequest().hasRole("USER") //그외 나머지 요청은 모두 인증된 회원만 접근 가능
