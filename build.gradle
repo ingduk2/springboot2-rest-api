@@ -7,7 +7,7 @@ apply plugin: 'io.spring.dependency-management'
 
 group = 'com.rest'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '9'
+sourceCompatibility = '11'
 
 configurations {
     compileOnly {
@@ -29,13 +29,14 @@ dependencies {
     implementation 'net.rakugakibox.util:yaml-resource-bundle:1.1'
     implementation 'org.springframework.boot:spring-boot-starter-security'
     implementation 'io.jsonwebtoken:jjwt:0.9.1'
-    implementation 'org.junit.jupiter:junit-jupiter:5.4.2'
     implementation 'com.google.code.gson:gson'
+    implementation 'org.springframework.boot:spring-boot-starter-actuator'
 
     compileOnly 'org.projectlombok:lombok'
     runtimeOnly 'com.h2database:h2'
     runtimeOnly 'mysql:mysql-connector-java'
     annotationProcessor 'org.projectlombok:lombok'
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.4.2'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testImplementation 'org.springframework.security:spring-security-test'
 }

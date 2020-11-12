@@ -8,7 +8,7 @@ spring:
     secret: goblepel@$&
   social:
     kakao:
-      client_id: f1e4892efa57f7ab74b621e507a2ac34 # 앱생성시 받은 REST API 키
+      client_id: XX # 앱생성시 받은 REST API 키
       redirect: /social/login/kakao
       url:
         login: https://kauth.kakao.com/oauth/authorize
