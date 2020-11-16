@@ -22,3 +22,6 @@ spring:
     generate-ddl: false
   url:
     base: http://url.com
+  redis:
+    host: host
+    port: 6379

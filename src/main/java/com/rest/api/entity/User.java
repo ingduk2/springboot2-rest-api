@@ -7,6 +7,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.Proxy;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -25,6 +26,7 @@ import java.util.stream.Collectors;
 @Table(name = "user")
 // Post Entity에서 User와의 관계를 Json으로 변환시 오류 방지를 위한 코드
 @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
+@Proxy(lazy = false)
 public class User extends CommonDateEntity implements UserDetails { // 날짜 필드 상속 처리
 
     @Id

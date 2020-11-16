@@ -1,5 +1,6 @@
 package com.rest.api.controller.v1.board;
 
+import com.rest.api.common.CacheKey;
 import com.rest.api.entity.board.Board;
 import com.rest.api.entity.board.Post;
 import com.rest.api.model.board.ParamPost;
@@ -14,6 +15,7 @@ import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
